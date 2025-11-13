@@ -3,14 +3,11 @@ import Elements from "../Elements/Elements";
 
 const Cards = ({ elements, setCards }) => {
   const handleLike = (_id) => {
-    console.log(_id, "_id");
-    elements.forEach((element) => {
-      if (element._id === _id) {
-        console.log("Herer");
-        element.isLiked ? false : true;
-      }
-    });
-    setCards(elements);
+    setCards((prev) =>
+      prev.map((card) =>
+        card._id === _id ? { ...card, isLiked: !card.isLiked } : card
+      )
+    );
   };
   return (
     <section className="cards">

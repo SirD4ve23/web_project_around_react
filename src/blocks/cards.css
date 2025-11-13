@@ -79,6 +79,8 @@
   background: url(../images/like_actived.svg);
   background-position: center;
   background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
 }
 
 @media screen and (max-width: 584px) {
